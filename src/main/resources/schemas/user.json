@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User",
+  "description": "A user from the bank",
+  "type": "object",
+  "properties": {
+    "password": {
+      "description": "Password of the user",
+      "type": "string",
+      "pattern": "^(?!.*\\s).{8,}$"
+    },
+    "email":{
+      "type":"string",
+      "format": "email",
+      "description":"email from a user"
+    }
+  },
+  "required": ["email", "password"]
+}
